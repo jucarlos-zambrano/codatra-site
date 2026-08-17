@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, type FormEvent } from 'react'
+import Link from 'next/link'
 import { CheckCircle2, ShieldCheck } from 'lucide-react'
 
 import {
@@ -99,7 +100,8 @@ export function LeadForm() {
               </h2>
               <p className="mt-4 text-pretty leading-relaxed text-primary-foreground/80">
                 Cuéntanos sobre tu empresa y te mostraremos cómo Codatra puede
-                ayudarte a cumplir con la Ley 21.719 de forma simple.
+                ayudarte a transformar requisitos complejos en procesos claros y
+                cumplimiento demostrable — empezando hoy por la Ley 21.719.
               </p>
               <ul className="mt-8 space-y-3">
                 {benefits.map((benefit) => (
@@ -219,7 +221,7 @@ export function LeadForm() {
                     type="email"
                     required
                     autoComplete="email"
-                    placeholder="nombre@empresa.cl"
+                    placeholder="nombre@correo.cl"
                     className="form-input"
                     disabled={status === 'submitting'}
                   />
@@ -244,8 +246,15 @@ export function LeadForm() {
                     : 'Solicitar una Demo'}
                 </button>
                 <p className="text-center text-xs leading-relaxed text-muted-foreground">
-                  Al enviar aceptas ser contactado por Codatra. Tratamos tus
-                  datos conforme a la Ley 21.719.
+                  Al enviar este formulario aceptas ser contactado por Codatra.
+                  Tratamos tus datos conforme a nuestra{' '}
+                  <Link
+                    href="/privacidad"
+                    className="font-medium text-primary underline-offset-4 hover:underline"
+                  >
+                    Política de Privacidad
+                  </Link>
+                  .
                 </p>
               </form>
             )}

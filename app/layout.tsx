@@ -1,6 +1,16 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+
+import {
+  OG_IMAGE,
+  SITE_DESCRIPTION,
+  SITE_KEYWORDS,
+  SITE_NAME,
+  SITE_TAGLINE,
+  SITE_URL,
+} from '@/lib/seo/site'
+
 import './globals.css'
 
 const geistSans = Geist({
@@ -15,75 +25,45 @@ const geistMono = Geist_Mono({
   display: 'swap',
 })
 
-const siteUrl = 'https://codatra.cl'
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default:
-      'Codatra — Cumplimiento de la Ley 21.719 para PyMEs en Chile',
-    template: '%s | Codatra',
+    default: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    template: `%s | ${SITE_NAME}`,
   },
-  description:
-    'Prepara tu empresa para la Ley 21.719 de Protección de Datos Personales sin ser experto legal. Software para PyMEs chilenas: evaluación de cumplimiento, Registro de Actividades de Tratamiento (RAT), análisis de brechas y gestión de solicitudes ARSOP.',
-  keywords: [
-    'Ley 21.719',
-    'cumplimiento ley 21.719',
-    'protección de datos Chile',
-    'registro de actividades de tratamiento',
-    'RAT',
-    'ARSOP',
-    'cumplimiento para PyMEs',
-    'protección de datos personales',
-    'software de cumplimiento',
-  ],
-  authors: [{ name: 'Codatra' }],
-  creator: 'Codatra',
-  publisher: 'Codatra',
-  alternates: {
-    canonical: siteUrl,
-  },
+  description: SITE_DESCRIPTION,
+  keywords: SITE_KEYWORDS,
+  authors: [{ name: SITE_NAME }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
   openGraph: {
     type: 'website',
     locale: 'es_CL',
-    url: siteUrl,
-    siteName: 'Codatra',
-    title: 'Codatra — Cumplimiento de la Ley 21.719 para PyMEs',
-    description:
-      'Prepara tu empresa para la Ley 21.719 sin ser experto legal. Evaluación, RAT, análisis de brechas, planes de acción y gestión ARSOP para PyMEs chilenas.',
+    siteName: SITE_NAME,
+    images: [OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Codatra — Cumplimiento de la Ley 21.719 para PyMEs',
-    description:
-      'Prepara tu empresa para la Ley 21.719 sin ser experto legal. Software de cumplimiento de protección de datos para PyMEs chilenas.',
+    images: [OG_IMAGE.url],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
-  generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+    apple: [{ url: '/apple-icon', type: 'image/png', sizes: '180x180' }],
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#ffffff',
+  themeColor: '#0a607a',
   colorScheme: 'light',
 }
 

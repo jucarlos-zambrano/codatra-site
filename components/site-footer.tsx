@@ -4,26 +4,26 @@ const footerNav = [
   {
     title: 'Plataforma',
     links: [
-      { label: 'Cómo funciona', href: '#como-funciona' },
-      { label: 'Módulos', href: '#modulos' },
-      { label: 'Beneficios', href: '#beneficios' },
-      { label: 'Solicitar Demo', href: '#demo' },
+      { label: 'Cómo funciona', href: '/#como-funciona' },
+      { label: 'Módulos', href: '/#modulos' },
+      { label: 'Beneficios', href: '/#beneficios' },
+      { label: 'Solicitar Demo', href: '/#demo' },
     ],
   },
   {
     title: 'Recursos',
     links: [
-      { label: 'Sobre la Ley 21.719', href: '#por-que-importa' },
-      { label: 'Preguntas frecuentes', href: '#faq' },
-      { label: 'Programa Piloto', href: '#piloto' },
+      { label: 'Sobre la Ley 21.719', href: '/#por-que-importa' },
+      { label: 'Preguntas frecuentes', href: '/#faq' },
+      { label: 'Programa Piloto', href: '/#piloto' },
     ],
   },
   {
     title: 'Empresa',
     links: [
-      { label: 'Contacto', href: '#demo' },
-      { label: 'Política de privacidad', href: '#' },
-      { label: 'Términos de servicio', href: '#' },
+      { label: 'Contacto', href: '/#demo' },
+      { label: 'Política de privacidad', href: '/privacidad' },
+      { label: 'Términos de servicio', href: '/terminos' },
     ],
   },
 ]
@@ -43,8 +43,8 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              Software de cumplimiento de la Ley 21.719 de Protección de Datos
-              Personales para PyMEs chilenas.
+              Plataforma de cumplimiento normativo y gestión de información para
+              PyMEs chilenas. Principal caso de uso actual: Ley 21.719.
             </p>
           </div>
 

@@ -24,5 +24,7 @@ alter table public.leads enable row level security;
 grant all privileges on table public.leads to service_role;
 
 grant usage on schema public to service_role;
+
+
 -- No policies for anon or authenticated roles.
 -- Inserts are performed server-side with the service role key only.

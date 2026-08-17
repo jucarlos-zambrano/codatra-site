@@ -39,18 +39,15 @@ export function Hero() {
             </span>
 
             <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              Cumplimiento de la{' '}
+              Prepárate para la Ley 21.719{' '}
               <span className="bg-gradient-to-r from-primary to-chart-4 bg-clip-text text-transparent">
-                Ley 21.719
+                sin complicarte.
               </span>{' '}
-              para PyMEs, sin ser experto legal.
             </h1>
 
             <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-              Codatra es la plataforma de software que ayuda a tu empresa a
-              entender, preparar y demostrar el cumplimiento de la nueva Ley de
-              Protección de Datos Personales en Chile. En lenguaje simple y con
-              un plan claro.
+              Codatra te ayuda a transformar requisitos complejos en procesos
+              claros y cumplimiento demostrable.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
